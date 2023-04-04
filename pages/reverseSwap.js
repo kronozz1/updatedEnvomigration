@@ -59,6 +59,7 @@ export default function Home() {
             const amount= ethers.utils.parseEther(input);
       const balance = await contract.approve(SwapAddress ,amount);
      await balance.wait();
+            setEnable(true);
     }catch(err){
       console.error(err);
     }
@@ -86,6 +87,8 @@ console.log(balance);
 const balance = await provider.getBalance(address);
 const userbnbBalance = ethers.utils.formatEther(balance);
     setbnbBalance(userbnbBalance);
+
+
     }catch(err){
       console.error(err);
     }
@@ -100,34 +103,21 @@ await BNBbalance();
     }
   }
 
-const checkApproval = async() =>{
-try{
-      const provider = await getSignerOrProvider(true);
-      const contract = new Contract(Token2Address, Token2abi, provider);
-      const amount= ethers.utils.parseEther(input);
-        const allowance = await contract.allowance(userAddress, SwapAddress);
-        if (allowance.lt(amount)) {
-  // Show an error message to the user
-  window.alert("Your balance didn't match the amount or You have to give the approval  ");
-  console.error("Your balance didn't match the amount or You have to give the approval  ");
-  return;
-}
-
-}catch(err){
-console.error(err);
-}
-}
 
   const swapToken1withToken2 = async(event) =>{
     event.preventDefault();
-    checkApproval();
     try{
   const signer = await getSignerOrProvider(true);
     const myContract = new Contract(SwapAddress , Swapabi , signer);
     const _tokenMinted = await myContract.buytoken2WithToken1(input);
-      console.log(success);
+      await _tokenMinted.wait();
+      window.location.replace("/reverseSwap");
 
     }catch(err){
+            if (err.message.includes('execution reverted: ERC20: insufficient')) {
+        window.alert('ERC20: insufficient allowance , please enter the approved input ');
+      } 
+
       console.error(err);
     }
 
@@ -231,12 +221,18 @@ console.error(err);
             </div>
 		 </div>
         </div>
-                <div class="p-2 w-full">
+        { !Enable ? 
+            <div class="p-2 w-full">
               <button type="button" onClick={approval} class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Approve</button>
         </div>
+
+      : 
+
         <div class="p-2 w-full">
-          <button type="submit"  class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Swap</button>
+          <button type="submit"   class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"> Swap</button>
         </div>
+    }
+
 		<p class="text-gray-600 text-center mt-1">Powered By ENVO Migration Swap</p>
       </div>
     </form>
