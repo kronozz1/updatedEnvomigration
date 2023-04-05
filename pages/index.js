@@ -256,26 +256,6 @@ await BNBbalance();
                         </li>
                     </ul>
 					
-					<ul class="socail-link">
-                        <li>
-                            <a href="#" target="_blank"><img src="facebook.svg" /></a>
-                        </li>
-                        <li>
-                            <a href="#" target="_blank"> <img src="twitter.svg" alt="twitter"/></a>
-                        </li>
-                        <li>
-                            <a href="#" target="_blank"><img src="instagram.svg" alt="instagram"/></a>
-                        </li>
-                        <li>
-                            <a href="#" target="_blank"><img src="reddit.svg" alt="github"/></a>
-                        </li>
-                        <li>
-                            <a href="#" target="_blank"><img src="telegram.svg" alt="telegram"/></a>
-                        </li>
-                        <li>
-                            <a href="#" target="_blank"><img src="linked-in.svg" alt="reddit"/> </a>
-                        </li>
-                    </ul>
   </div>
   </div>
   
