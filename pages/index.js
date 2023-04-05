@@ -238,46 +238,29 @@ await BNBbalance();
   </div>
   
   <div class="box-50">
-             <ul class="socail-btn">
+                 <ul class="socail-btn">
                         <li>
                             <a class="btn_right bg-indigo-500" href="#" target="_blank">Website</a>
                         </li>
                         <li>
-                            <a class="btn_right bg-indigo-500"  href="#" target="_blank">ENVO Migration(ENVO) Token Contract</a>
+                            <a class="btn_right bg-indigo-500"  href="https://bscscan.com/address/0x1B55B460830CbBD6c6F4EC3dba10352057F1e83D" target="_blank">ENVO Migration(ENVO) Token Contract</a>
                         </li>
                         <li >
-                            <a class="btn_right bg-indigo-500 w70 mr-3"  href="#" target="_blank" >ENVO Migration(GSPV2) Token Contract</a>
+                            <a class="btn_right bg-indigo-500 w70 mr-3"  href="https://bscscan.com/address/0x680BFfd5A313da8A3F5a80bcF7132721639eA941" target="_blank" >ENVO Migration(ENVO_V1) Token Contract</a>
 							<a href="#" ><img className="h-10 w-10 mr-2" src="favicon.png" /></a>
                         </li>
                         <li>
-                            <a class="btn_right bg-indigo-500"  href="#" target="_blank">
-                               ENVO Migration Swap Contract (ENVO : GSPV2)
+                            <a class="btn_right bg-indigo-500"  href="https://bscscan.com/address/0xb42fbba5e6bfa29aa36ab7e8be6c369d70161863" target="_blank">
+                               ENVO Migration Swap Contract (ENVO : ENVO_V1)
                             </a>
                         </li>
                     </ul>
+
 					
   </div>
   </div>
   
   
-  <div class="reminder-ltl  mb-5">
-                        <h3 class="mb-3">Information About Contract</h3>
-                        <ul class="">
-                            <li>
-                                ENVO Migration(ENVO) Token Contract :
-                                <a href="javascript:void(0)">0xdCF6773f545c8dA07Bd8A76ds4C56fcBA4De48c46b</a>
-                            </li>
-                            <li>
-                                ENVO Migration(GSPV2) Token Contract :
-                                <a href="javascript:void(0)">0xFDe889726DabdEeb8f050605ss48CF7Adb9B35fd3B</a>
-                            </li>
-                            <li>
-                                Swapping Contract ENVO:GSPV2 :
-                                <a href="javascript:void(0)">0x3a883f14a8fC5ab4737FeEwsws3Ee827F7E4900b92Eb</a>
-                            </li>
-                        </ul>
-   </div>
-   <p class="text-white copy_right">ENVO Migration Swapping Platform.</p>
   
   
   
