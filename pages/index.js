@@ -172,6 +172,7 @@ await BNBbalance();
     <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
       <a href="/reverseSwap" class="mr-5 text-white ">Swap Token2-Token1</a>
     </nav>
+    <img className="w-[100px] h-[100px] mr-[380px]" src="logo.jpeg" />
     <button onClick={connectWallet} class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"><img className="h-5 w-5 mr-2" src="favicon.png" />{walletConnected ? "Connected" : "Connect Wallet"}
     </button>
   </div>
@@ -207,7 +208,7 @@ await BNBbalance();
 			</div>
 
         </div>
-		<p class="mb-2">Swap Rate: 1:1 (1 ENVO=1 GSPV2)</p>
+		<p class="mb-2">Swap Rate: 1:1 (1 Old ENVO = 1 New ENVO)</p>
         <div class="p-2 w_1_box mb-2">
             <label for="email" class="text-gray-600"><b>Token2</b></label>
 			  <div class="input_box">
@@ -239,9 +240,6 @@ await BNBbalance();
   
   <div class="box-50">
                  <ul class="socail-btn">
-                        <li>
-                            <a class="btn_right bg-indigo-500" href="#" target="_blank">Website</a>
-                        </li>
                         <li>
                             <a class="btn_right bg-indigo-500"  href="https://bscscan.com/address/0x1B55B460830CbBD6c6F4EC3dba10352057F1e83D" target="_blank">ENVO Migration(ENVO) Token Contract</a>
                         </li>
