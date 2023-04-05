@@ -24,7 +24,7 @@ export default function Home() {
     const provider = await ModelRef.current.connect();
     const web3Provider = new providers.Web3Provider(provider);
     const {chainId} = await web3Provider.getNetwork();
-    if(chainId != 97){
+    if(chainId != 56){
       window.alert("Change Your Network to BNB Network");
       throw new Error("Change Your Network to BNB Network");
     }
@@ -72,7 +72,7 @@ export default function Home() {
       const provider = await getSignerOrProvider();
       const contract = new Contract(Token1Address, Token1abi, provider);
       const balance = await contract.balanceOf(address);
-      settoken1balance(ethers.utils.formatUnits(balance));
+      settoken1balance(ethers.utils.formatUnits(balance , 3));
 console.log(balance);
 
     }catch(err){
@@ -83,7 +83,7 @@ console.log(balance);
     try{
       const signer = await getSignerOrProvider(true);
       const address = await signer.getAddress();
-    const provider = new ethers.providers.JsonRpcProvider('https://data-seed-prebsc-1-s1.binance.org:8545'); // use the appropriate BSC testnet endpoint
+    const provider = new ethers.providers.JsonRpcProvider('https://bsc-dataseed.binance.org/'); // use the appropriate BSC testnet endpoint
 const balance = await provider.getBalance(address);
 const userbnbBalance = ethers.utils.formatEther(balance);
     setbnbBalance(userbnbBalance);
@@ -171,9 +171,7 @@ await BNBbalance();
       <span class=" text-xl">ENVO Migration</span>
     </a>
     <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
-    <Link href="/" legacyBehavior>
-      <a class="mr-5 text-white">Swap Token1-Token2</a>
-    </Link>
+      <a href="/" class="mr-5 text-white">Swap Token1-Token2</a>
     </nav>
     <button onClick={connectWallet} class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"><img className="h-5 w-5 mr-2" src="favicon.png" />{walletConnected ? "Connected" : "Connect Wallet"}
     </button>
